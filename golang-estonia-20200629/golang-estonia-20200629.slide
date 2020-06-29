@@ -1,0 +1,85 @@
+A story of parsing with Go
+29 Jun 2020
+Tags: parser
+
+Masakazu Ohtsuka "mash"
+o.masakazu@gmail.com
+https://github.com/mash/
+@maaash
+
+* Building a parser was something special for me
+
+- "lexer", "parser", "tokens"
+- converting text into programs
+- too difficult, advanced for me
+- but really ?
+
+* IRKit in 2014
+
+I was building an Arduino based hardware and planning to manufacture it.
+
+.link https://getirkit.com/en/
+
+* The problem
+
+- a program to write a different password for each device
+- which is fast
+- this program should run on a Windows computer
+- and I'd like to write it on a Mac
+
+* Intelhex
+
+To write firmware into Arduinos, or Atmel microcontrollers, you use Intelhex files.
+
+.link https://en.wikipedia.org/wiki/Intel_HEX
+
+* go-intelhex
+
+.link https://github.com/mash/go-intelhex
+
+* Djinni in 2018
+
+I had a project that uses Djinni.
+
+.link https://github.com/dropbox/djinni
+
+Djinni is a tool for generating cross-language type declarations and interface bindings. It's designed to connect C++ with either Java or Objective-C.
+
+* Djinni
+
+.image djinni-generated-code.png
+
+* The problem with Djinni
+
+.image djinni-archived.png
+
+- Wanted one more feature
+- Scala
+- Rewrite everything or ?
+
+* Djinni IDL Parser in Go
+
+https://github.com/SafetyCulture/djinni-parser
+
+.link https://github.com/SafetyCulture/djinni-parser/compare/master...planetway:record-fields
+
+* Djinni Renderer, the code generator
+
+.link https://github.com/planetway/djinni-renderer
+
+* Good
+
+- Separated the syntax parser and code generation
+- No dependency on Scala
+- I can now generate Go code!
+
+* References
+
+.link https://blog.gopheracademy.com/advent-2014/parsers-lexers/
+.link https://golang.org/src/go/parser/parser.go
+
+* Write a parser
+
+- It's fun, feels like magic
+- You're in control
+- Definitely nice to have in your toolbox
